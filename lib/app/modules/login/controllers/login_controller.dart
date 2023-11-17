@@ -7,11 +7,12 @@ class LoginController extends GetxController {
   void onInit() {
     // logIn();
     super.onInit();
+
   }
 
   logIn(){
     
-   Get.offAllNamed(Routes.HOME);
+   Get.offAllNamed(Routes.NAV_VIEW);
     
   }
 }
