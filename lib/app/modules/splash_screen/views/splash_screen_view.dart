@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:new_project/widget/kText.dart';
 import '../controllers/splash_screen_controller.dart';
 
 class SplashScreenView extends GetView<SplashScreenController> {
@@ -13,13 +14,22 @@ class SplashScreenView extends GetView<SplashScreenController> {
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            Container(
-              height: 40,
-              width: 40,
-              color: Colors.red,
+            
+            SizedBox(
+              height: Get.height/10*2,
+              width: Get.height/10*2,
+            child: Image.asset("assets/logo/bn_scout_logo.png"),
             ),
-            SizedBox(height: 30,),
-            CircularProgressIndicator(),
+
+            SizedBox(height: 20,),
+            KText(
+              data: "Rover Management",
+              fontsize: 22),
+            SizedBox(height: 50,),
+            SizedBox(
+              height: 50, 
+              width: 50,
+              child: CircularProgressIndicator()),
           ],
         ),
         ),
@@ -27,3 +37,5 @@ class SplashScreenView extends GetView<SplashScreenController> {
     
   }
 }
+
+

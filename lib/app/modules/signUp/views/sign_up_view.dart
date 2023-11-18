@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 
 import 'package:get/get.dart';
 import 'package:new_project/app/modules/login/views/login_view.dart';
+import 'package:new_project/widget/kText.dart';
 import 'package:new_project/widget/kTextFormField.dart';
 
 import '../controllers/sign_up_controller.dart';
@@ -21,16 +22,24 @@ class SignUpView extends GetView<SignUpController> {
             child: Column(
               mainAxisAlignment: MainAxisAlignment.center,
               children:  [
-                Text("Create a new account.",style: TextStyle(fontSize: 35),),
+                SizedBox(
+                  height: Get.height/10*1.5,
+                  width: Get.height/10*1.5,
+                child: Image.asset("assets/logo/bn_scout_logo.png"),
+                ),
+                SizedBox(height: 20,),
+                KText(
+                  data: "Create a new account.",
+                  fontsize: 35,),
                 SizedBox(height: 10,),
                 KTextFormField(
                   label: Text("Full name"),
-                  prefixIcon: Icon(Icons.email),
+                  prefixIcon: Icon(Icons.person),
                 ),
                 SizedBox(height: 10),
                  KTextFormField(
                   label: Text("Mobile Number"),
-                  prefixIcon: Icon(Icons.email),
+                  prefixIcon: Icon(Icons.call),
                 ),
                 SizedBox(height: 10),
                  KTextFormField(
@@ -40,21 +49,23 @@ class SignUpView extends GetView<SignUpController> {
                 SizedBox(height: 10),
                  KTextFormField(
                   label: Text("Institute Code"),
-                  prefixIcon: Icon(Icons.email),
+                  prefixIcon: Icon(Icons.code),
                 ),
                 SizedBox(height: 10),
                  KTextFormField(
                   label: Text("User name"),
-                  prefixIcon: Icon(Icons.email),
+                  prefixIcon: Icon(Icons.verified_user_outlined),
                 ),
                 SizedBox(height: 10),
                  KTextFormField(
                   label: Text("Password"),
-                  prefixIcon: Icon(Icons.email),
+                  prefixIcon: Icon(Icons.lock),
+                  suffixIcon: Icon(Icons.visibility_off),
                 ),
                 SizedBox(height: 10), KTextFormField(
                   label: Text("Confirm Password"),
-                  prefixIcon: Icon(Icons.email),
+                  prefixIcon: Icon(Icons.lock),
+                  suffixIcon: Icon(Icons.visibility_off),
                 ),
                 // SizedBox(height: 10),
                 //  KTextFormField(
@@ -67,14 +78,14 @@ class SignUpView extends GetView<SignUpController> {
                   child: ElevatedButton(onPressed: () {
                     showDialog(context: context, 
                     builder: (context) => AlertDialog(
-                      title: Text("Dialog"),
-                      content: Text("Account Created Successfully"),
+                      title: Center(child: Text("Successful")),
+                      content: Text("      Account Created Successfully"),
                     ),);
                   }, child: Text("Create Account")),
                 ),
                 SizedBox(height: 10),
                 Text.rich(TextSpan(children: [
-              TextSpan(text: "Don't have an account?",style: TextStyle(fontSize: 17)),
+              TextSpan(text: "Already have an account?",style: TextStyle(fontSize: 17)),
               TextSpan(text: "  ",style: TextStyle(fontSize: 17)),
               TextSpan(text: "Login",style: TextStyle(fontSize: 17, color: Colors.blueAccent[700]),
               recognizer: TapGestureRecognizer()..onTap= ()=> Navigator.pushReplacement(context, MaterialPageRoute(builder: (context) => LoginView(),))
