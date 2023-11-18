@@ -74,7 +74,15 @@ class LoginView extends GetView<LoginController> {
                       }
                     },
                   ),
-                  SizedBox(height: 30,),
+                  SizedBox(height: 3),
+                  Row(
+                    mainAxisAlignment: MainAxisAlignment.end,
+                    children: [
+                      TextButton(onPressed: () {}, 
+                      child: KText(data: "Forgot Password?", fontsize: 16,)),
+                    ],
+                  ),
+                  SizedBox(height: 20,),
                   
                       
                   SizedBox(

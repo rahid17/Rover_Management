@@ -10,6 +10,7 @@ abstract class Routes {
   static const NAV_VIEW = _Paths.NAV_VIEW;
   static const MAIN_APP = _Paths.MAIN_APP;
   static const PROFILE = _Paths.PROFILE;
+  static const MESSAGE = _Paths.MESSAGE;
 }
 
 abstract class _Paths {
@@ -21,4 +22,5 @@ abstract class _Paths {
   static const NAV_VIEW = '/nav-view';
   static const MAIN_APP = '/main-app';
   static const PROFILE = '/profile';
+  static const MESSAGE = '/message';
 }

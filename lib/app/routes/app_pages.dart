@@ -6,6 +6,8 @@ import '../modules/login/bindings/login_binding.dart';
 import '../modules/login/views/login_view.dart';
 import '../modules/mainApp/bindings/main_app_binding.dart';
 import '../modules/mainApp/views/main_app_view.dart';
+import '../modules/message/bindings/message_binding.dart';
+import '../modules/message/views/message_view.dart';
 import '../modules/navView/bindings/nav_view_binding.dart';
 import '../modules/navView/views/nav_view_view.dart';
 import '../modules/profile/bindings/profile_binding.dart';
@@ -57,6 +59,11 @@ class AppPages {
       name: _Paths.PROFILE,
       page: () => const ProfileView(),
       binding: ProfileBinding(),
+    ),
+    GetPage(
+      name: _Paths.MESSAGE,
+      page: () => const MessageView(),
+      binding: MessageBinding(),
     ),
   ];
 }
