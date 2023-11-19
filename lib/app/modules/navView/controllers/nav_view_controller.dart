@@ -16,4 +16,9 @@ class NavViewController extends GetxController {
     selectIndex.value = index;
   }
 
+
+  logOut(){
+    onClose();
+  }
+
 }

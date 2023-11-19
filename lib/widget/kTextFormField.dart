@@ -25,6 +25,7 @@ class KTextFormField extends StatelessWidget {
   Widget build(BuildContext context) {
     return TextFormField(
       onTap: (){},
+      
       validator: validator  ,
       controller: controller,
       obscureText: obsecureText,

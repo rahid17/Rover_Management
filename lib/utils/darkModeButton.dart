@@ -8,15 +8,11 @@ class KDarkModeButton extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final controller = Get.put(MainAppController());
-    return Container(
-      height: 80,
-      width: 80,
-      child: Obx(() => IconButton(onPressed: (){
-        controller.changeTheme();
-      }, icon: controller.theme.value?
-                SizedBox(height:500,width: 500, child: Icon(Icons.toggle_on,size: 70,)):
-                SizedBox(height:500, child: Icon(Icons.toggle_off, size: 70,))
-                )),
-    );
+    return Obx(() => IconButton(onPressed: (){
+      controller.changeTheme();
+    }, icon: controller.theme.value?
+              Icon(Icons.toggle_on,size: 70,):
+              Icon(Icons.toggle_off, size: 70,)
+              ));
   }
 }

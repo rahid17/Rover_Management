@@ -24,5 +24,8 @@ appBarTheme: AppBarTheme(
  ),
 iconTheme: IconThemeData(
   color: Colors.white
+),
+drawerTheme: DrawerThemeData(
+  backgroundColor: Colors.black,
 )
 );
