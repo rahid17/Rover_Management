@@ -31,8 +31,11 @@ class NavViewView extends GetView<NavViewController> {
                   
                   height: 90,
                   width: 90,
-                  // decoration:BoxDecoration(borderRadius: BorderRadius.circular(100)) ,
-                  child: Image.asset("assets/user/user1.jpg"),
+                  decoration:BoxDecoration(
+                    borderRadius: BorderRadius.circular(30),
+                    image: DecorationImage(image: AssetImage("assets/user/user1.jpg"))
+                    ) ,
+                  // child: Image.asset("assets/user/user1.jpg"),
                  ), 
                  Column(
                   mainAxisAlignment: MainAxisAlignment.center,
@@ -51,6 +54,19 @@ class NavViewView extends GetView<NavViewController> {
                        ),
                        KText(
                         data: "ARM",
+                        fontsize: 16,
+                        FontWeight: FontWeight.bold,
+                       )
+                        ],
+                       ), 
+                       Row(
+                        children: [
+                          KText(
+                        data: "Group : ",
+                        fontsize: 16,
+                       ),
+                       KText(
+                        data: "Sodoy",
                         fontsize: 16,
                         FontWeight: FontWeight.bold,
                        )
@@ -144,7 +160,10 @@ class NavViewView extends GetView<NavViewController> {
                 controller.logOut();
 
 
-              }, child: KText(data: "Logout",))
+              }, child: KText(data: "Logout",)),
+              SizedBox(height: 20,) ,
+
+              KText(data: "All rights reserved by Rahid", fontsize: 11,)
 
 
 
@@ -162,8 +181,8 @@ class NavViewView extends GetView<NavViewController> {
       appBar: AppBar(
         title: Column(
           children: [
-            KText(data: "Rover",FontWeight: FontWeight.bold,fontsize: 22,color: Colors.yellow,),
-            KText(data: "Management",FontWeight: FontWeight.bold,fontsize: 22,color: Colors.yellow,),
+            KText(data: "Rover",FontWeight: FontWeight.bold,fontsize: 22,color: Colors.black,),
+            KText(data: "Management",FontWeight: FontWeight.bold,fontsize: 22,color: Colors.black,),
           ],
         ),
         centerTitle: true,
@@ -214,7 +233,7 @@ class NavViewView extends GetView<NavViewController> {
                     ),
                   ),
                   label: 'Home',
-                  backgroundColor: Color.fromRGBO(36, 54, 101, 1.0),
+                  
                 ),
       
           BottomNavigationBarItem(
@@ -226,7 +245,7 @@ class NavViewView extends GetView<NavViewController> {
                     ),
                   ),
                   label: 'Message',
-                  backgroundColor: Color.fromRGBO(36, 54, 101, 1.0),
+                  
                 ),
           BottomNavigationBarItem(
                   icon: Container(
@@ -237,7 +256,7 @@ class NavViewView extends GetView<NavViewController> {
                     ),
                   ),
                   label: 'Profile',
-                  backgroundColor: Color.fromRGBO(36, 54, 101, 1.0),
+                  
                 ),
         ]),
       ),

@@ -127,11 +127,7 @@ class LoginView extends GetView<LoginController> {
                     ),
                   ])),
 
-                  SizedBox(height: 40,),
-
-                  SizedBox(
-                    child: KDarkModeButton(),
-                  )   
+                    
                       
                 ],
               ),
