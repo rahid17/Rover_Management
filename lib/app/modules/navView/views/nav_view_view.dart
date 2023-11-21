@@ -5,6 +5,7 @@ import 'package:new_project/app/modules/home/views/home_view.dart';
 import 'package:new_project/app/modules/message/views/message_view.dart';
 import 'package:new_project/app/modules/profile/views/profile_view.dart';
 import 'package:new_project/utils/darkModeButton.dart';
+import 'package:new_project/utils/kAssetImage.dart';
 import 'package:new_project/widget/kText.dart';
 
 import '../controllers/nav_view_controller.dart';
@@ -16,6 +17,7 @@ class NavViewView extends GetView<NavViewController> {
     Get.put(NavViewController());
     return Scaffold(
       drawer: Drawer(
+        width: Get.width/10*8,
        child: Column(
         children: [
           Container(
@@ -33,7 +35,7 @@ class NavViewView extends GetView<NavViewController> {
                   width: 90,
                   decoration:BoxDecoration(
                     borderRadius: BorderRadius.circular(30),
-                    image: DecorationImage(image: AssetImage("assets/user/user1.jpg"))
+                    image: DecorationImage(image: AssetImage(KAssetImage.defaultImage1))
                     ) ,
                   // child: Image.asset("assets/user/user1.jpg"),
                  ), 

@@ -3,6 +3,7 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:new_project/data/local_data.dart';
+import 'package:new_project/data/user_data.dart';
 
 class MainAppController extends GetxController {
   RxBool theme =false.obs;
@@ -23,4 +24,8 @@ class MainAppController extends GetxController {
     LocalData().setThemeData(theme.value);
     Get.changeThemeMode(theme.value? ThemeMode.dark:ThemeMode.light);
   }
+
+  // checkUser() async {
+  //   UserData.value = await LocalData().setUser
+  // }
 }

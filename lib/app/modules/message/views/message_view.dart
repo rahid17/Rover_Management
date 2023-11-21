@@ -14,9 +14,10 @@ class MessageView extends GetView<MessageController> {
       body: Column(
         children: [
           Container(
-            height: 60, 
+            height: Get.height/100*6, 
             width: Get.width,
             decoration: BoxDecoration(
+              borderRadius: BorderRadius.only(bottomLeft: Radius.circular(20), bottomRight: Radius.circular(20)),
               color: Colors.green[200],
               
             ),
@@ -26,8 +27,23 @@ class MessageView extends GetView<MessageController> {
             ), 
           ), 
           SizedBox(
-            height: 10,
+            height: Get.height/100*1,
           ),
+          SingleChildScrollView(
+            child: Container(
+              height: Get.height/100*76.2,
+              width: Get.width,
+              decoration: BoxDecoration(
+                borderRadius: BorderRadius.only(topLeft: Radius.circular(20), topRight: Radius.circular(20)),
+                color: Colors.green[200]
+              ),
+              // child: ListView.separated(
+              //   itemCount: 10,
+              //   itemBuilder: itemBuilder, 
+              //   separatorBuilder: , 
+              //   ),
+            ),
+          )
 
         ],
       ) ,

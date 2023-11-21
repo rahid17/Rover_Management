@@ -66,6 +66,7 @@ class LoginView extends GetView<LoginController> {
                   KTextFormField(
                     label: Text("Password"),
                     prefixIcon: Icon(Icons.lock),
+                    suffixIcon: Icon(Icons.visibility_off),
                     controller: AuthData.password,
                     obsecureText: true,
                     validator: (value){
