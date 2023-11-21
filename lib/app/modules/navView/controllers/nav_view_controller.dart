@@ -17,13 +17,11 @@ class NavViewController extends GetxController {
     selectIndex.value = index;
   }
 
+  goToNotification(){
+    Get.toNamed(Routes.NOTIFICATION);
+  }
 
-
- 
-  logOut(){
-
-    
+  logOut(){ 
    Get.offAllNamed(Routes.LOGIN);
-    
   }
 }

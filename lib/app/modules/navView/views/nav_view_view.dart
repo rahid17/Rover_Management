@@ -194,7 +194,11 @@ class NavViewView extends GetView<NavViewController> {
                 width: 50, ),
                 Positioned(
                   top: 12,right: 15,
-                  child: Icon(Icons.notifications, size: 35,color: Colors.yellow,)),
+                  child: InkWell(
+                    onTap: (){
+                      controller.goToNotification();
+                    },
+                    child: Icon(Icons.notifications, size: 35,color: Colors.yellow,))),
                 Positioned(
                   right: 19,  top: 10,
                   child: Center(

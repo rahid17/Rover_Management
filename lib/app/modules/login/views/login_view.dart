@@ -94,7 +94,9 @@ class LoginView extends GetView<LoginController> {
                         //   print("invalid");
                         // }
                         print("valid");
-                        controller.logIn();
+                        controller.logIn(
+                        );
+                        
                         // Navigator.pushReplacementNamed(context, Routes.NAV_VIEW);
                       }else{
                         print("Invalid");

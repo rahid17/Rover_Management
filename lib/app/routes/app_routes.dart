@@ -11,6 +11,13 @@ abstract class Routes {
   static const MAIN_APP = _Paths.MAIN_APP;
   static const PROFILE = _Paths.PROFILE;
   static const MESSAGE = _Paths.MESSAGE;
+  static const MEMBER_LIST = _Paths.MEMBER_LIST;
+  static const EX_MEMBER_LIST = _Paths.EX_MEMBER_LIST;
+  static const ACCOUNTS = _Paths.ACCOUNTS;
+  static const TASK_SCHEDULE = _Paths.TASK_SCHEDULE;
+  static const ACTIVITY_LOG = _Paths.ACTIVITY_LOG;
+  static const CREATE_NOTICE = _Paths.CREATE_NOTICE;
+  static const NOTIFICATION = _Paths.NOTIFICATION;
 }
 
 abstract class _Paths {
@@ -23,4 +30,11 @@ abstract class _Paths {
   static const MAIN_APP = '/main-app';
   static const PROFILE = '/profile';
   static const MESSAGE = '/message';
+  static const MEMBER_LIST = '/member-list';
+  static const EX_MEMBER_LIST = '/ex-member-list';
+  static const ACCOUNTS = '/accounts';
+  static const TASK_SCHEDULE = '/task-schedule';
+  static const ACTIVITY_LOG = '/activity-log';
+  static const CREATE_NOTICE = '/create-notice';
+  static const NOTIFICATION = '/notification';
 }

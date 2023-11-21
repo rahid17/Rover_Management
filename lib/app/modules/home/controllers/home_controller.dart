@@ -1,23 +1,16 @@
 import 'package:get/get.dart';
+import 'package:new_project/app/modules/homeFeatures/accounts/views/accounts_view.dart';
+import 'package:new_project/app/modules/homeFeatures/createNotice/views/create_notice_view.dart';
+import 'package:new_project/app/modules/homeFeatures/exMemberList/views/ex_member_list_view.dart';
+import 'package:new_project/app/modules/homeFeatures/memberList/views/member_list_view.dart';
 
 class HomeController extends GetxController {
-  //TODO: Implement HomeController
 
-  // final count = 0.obs;
-  // @override
-  // void onInit() {
-  //   super.onInit();
-  // }
-
-  // @override
-  // void onReady() {
-  //   super.onReady();
-  // }
-
-  // @override
-  // void onClose() {
-  //   super.onClose();
-  // }
-
-  // void increment() => count.value++;
+  RxList featureList = [
+    MemberListView(), 
+    ExMemberListView(), 
+    CreateNoticeView(), 
+    AccountsView(), 
+    
+  ].obs;
 }

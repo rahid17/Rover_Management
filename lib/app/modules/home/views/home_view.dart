@@ -43,18 +43,14 @@ class HomeView extends GetView<HomeController> {
                           Row(
                             // mainAxisAlignment: MainAxisAlignment.center,
                             children: [
-                              KText(data: "Unit :", fontsize: 24, FontWeight: FontWeight.bold),
-                              SizedBox(width: 10,),
-                              KText(data: "FCI Boys in Rover", fontsize: 24, FontWeight: FontWeight.bold),
+                              KText(data: "Unit : FCI Boys in Rover", fontsize: 24, FontWeight: FontWeight.bold),
                             ],
                           ), 
                           SizedBox(height: 5,),
                           Row(
                             // mainAxisAlignment: MainAxisAlignment.center,
                             children: [
-                              KText(data: "Unit Code:", fontsize: 16, FontWeight: FontWeight.bold),
-                              SizedBox(width: 10,),
-                              KText(data: "FCIRSG-BR", fontsize: 16, FontWeight: FontWeight.bold),
+                              KText(data: "Unit Code: FCIRSG-BR", fontsize: 16, FontWeight: FontWeight.bold),
                             ],
                           ), 
                         ],
@@ -78,7 +74,7 @@ class HomeView extends GetView<HomeController> {
                 ),
                 child: GridView.builder(
                   gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(crossAxisCount: 3 ),
-                   itemCount:12 ,
+                   itemCount:13 ,
                    itemBuilder:(context, index ){
                     return Padding(
                       padding: const EdgeInsets.all(8.0),
